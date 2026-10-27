@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Average Academy - Calculadora de Promedio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Encabezado -->
+        <header>
+            <h1>Average Academy</h1>
+            <p>"Ingresa tus notas y descubre tu promedio"</p>
+        </header>
+
+        <!-- Formulario e Inputs de Notas -->
+        <main>
+            <section class="card">
+                <h2>Ingresa tus notas</h2>
+                
+                <div id="contenedor-notas">
+                    <div class="input-group">
+                        <label>Nota 1:</label>
+                        <input type="number" class="nota-input" step="0.1" min="0" max="5" placeholder="ej. 4.5">
+                    </div>
+                    <div class="input-group">
+                        <label>Nota 2:</label>
+                        <input type="number" class="nota-input" step="0.1" min="0" max="5" placeholder="ej. 3.8">
+                    </div>
+                    <div class="input-group">
+                        <label>Nota 3:</label>
+                        <input type="number" class="nota-input" step="0.1" min="0" max="5" placeholder="ej. 4.2">
+                    </div>
+                </div>
+
+                <div class="botones-acciones">
+                    <button id="btn-agregar" class="btn btn-secundario">+ Agregar Nota</button>
+                    <button id="btn-calcular" class="btn btn-primario">Calcular Promedio</button>
+                    <button id="btn-borrar" class="btn btn-peligro">Borrar Todo</button>
+                </div>
+            </section>
+
+            <!-- Sección de Resultados -->
+            <section class="card resultado-card" id="seccion-resultado" style="display: none;">
+                <h2>Tu Promedio</h2>
+                <div class="promedio-destacado">
+                    <span id="valor-promedio">0.0</span> / 5.0
+                </div>
+                <p id="mensaje-retroalimentacion" class="mensaje"></p>
+
+                <hr>
+
+                <div class="detalles-calculo">
+                    <p><strong>Total Notas:</strong> <span id="total-notas">0</span></p>
+                    <p><strong>Suma Total:</strong> <span id="suma-total">0.0</span></p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
